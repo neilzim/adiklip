@@ -1016,7 +1016,7 @@ def klip_subtract(dataset_label, data_dir, result_dir, R_inner, R_out, mode_cut,
         #
         delimiter = '-'
         if result_label == None:
-            result_label = "%s_globalklip_rad%03d-%03d_mode%03d-%03d" % (dataset_label, R_inner, R_out[-1], mode_cut[0], mode_cut[-1])
+            result_label = "%s_klip_rad%03d-%03d_mode%03d-%03d" % (dataset_label, R_inner, R_out[-1], mode_cut[0], mode_cut[-1])
         klipsub_cube_fname = "%s/%s_res_cube.fits" % (result_dir, result_label)
         klippsf_cube_fname = "%s/%s_psf_cube.fits" % (result_dir, result_label)
         derot_klipsub_cube_fname = "%s/%s_derot_res_cube.fits" % (result_dir, result_label)
