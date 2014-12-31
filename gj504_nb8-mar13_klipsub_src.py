@@ -15,7 +15,7 @@ import cPickle as pickle
 import matplotlib.pyplot as plt
 import matplotlib.colors
 
-N_proc = 8
+N_proc = 4
 diagnos_stride = 100
 #N_proc = 2
 
@@ -28,8 +28,8 @@ result_dir = os.path.expanduser('/Volumes/MacDataHDD/GJ504/2014mar13/sat/klipsub
 # source PCA search zone config
 #
 fwhm = 4.
-R_inner = 215
-R_out = [255]
+R_inner = 212
+R_out = [252]
 
 parang_fname = '%s/%s_parang.sav' % (data_dir, dataset_label)
 parang_seq = readsav(parang_fname).master_parang_arr
@@ -46,8 +46,8 @@ store_archv = True
 use_svd = True
 coadd_full_overlap_only = True
 
-mode_cut = [10]
-min_refgap_fac = [1.]
+mode_cut = [15]
+min_refgap_fac = [1.0]
 result_label = 'gj504_nb8-mar13_src_K%d_refgap%02d' % (mode_cut[0], round(10*min_refgap_fac[0]))
 
 klip_config, klip_data,\
@@ -67,4 +67,3 @@ if store_archv:
        pickle.dump((klip_config, klip_data), klipsub_archv, protocol=2)
        klipsub_archv.close()
        print "Wrote KLIP reduction (%.3f Mb) archive to %s" % (os.stat(klipsub_archv_fname).st_size/10.**6, klipsub_archv_fname)
-

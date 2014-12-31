@@ -24,7 +24,7 @@ template_img_fname = '%s/gj504_nb6_globalklip_rad215-255_mode010-010_res_coadd.f
 synthpsf_fname = '%s/reduc/gj504_nb6_psf_model.fits' % data_dir
 mode_cut = 20
 N_proc = 20
-synthpsf_rolloff = 10.
+synthpsf_rolloff = 20.
 
 # October canonical reduction; full data set
 print ''
